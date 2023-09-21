@@ -35,35 +35,35 @@ tokio = { version = "1.27.0" }
 zstd = { version = "0.11.2", default-features = false }
 
 # Substrate
-frame-remote-externalities = { git = "https://github.com/paritytech/substrate", branch = "master" }
-frame-try-runtime = { git = "https://github.com/paritytech/substrate", branch = "master" }
+frame-remote-externalities = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+frame-try-runtime = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
-sc-cli = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sc-executor = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sc-cli = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sc-executor = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sc-service = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-consensus-aura = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-externalities = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-inherents = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-rpc = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-std = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-transaction-storage-proof = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-version = { git = "https://github.com/paritytech/substrate", branch = "master" }
-sp-weights = { git = "https://github.com/paritytech/substrate", branch = "master" }
+sp-api = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-consensus-aura = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-consensus-babe = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-externalities = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-inherents = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-io = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-keystore = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-rpc = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-state-machine = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-std = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-timestamp = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-transaction-storage-proof = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-version = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-weights = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
-substrate-cli-test-utils = { git = "https://github.com/paritytech/substrate", branch = "master" }
-substrate-rpc-client = { git = "https://github.com/paritytech/substrate", branch = "master" }
+substrate-cli-test-utils = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+substrate-rpc-client = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
-node-executor = { git = "https://github.com/paritytech/substrate", branch = "master" }
-node-primitives = { git = "https://github.com/paritytech/substrate", branch = "master" }
+node-executor = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+node-primitives = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
 # Local
 try-runtime-core = { path = "core" }
