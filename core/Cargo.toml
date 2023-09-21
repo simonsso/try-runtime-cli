@@ -27,7 +27,7 @@ strum_macros = { workspace = true }
 zstd = { workspace = true }
 
 frame-remote-externalities = { workspace = true }
-frame-try-runtime = { workspace = true, features=["try-runtime"] }
+frame-try-runtime = { workspace = true, features = ["try-runtime"] }
 
 sc-cli = { workspace = true }
 sc-executor = { workspace = true }
