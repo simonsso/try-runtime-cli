@@ -42,7 +42,7 @@ jobs:
       - name: Install deps for musl build
         run: |
           sudo apt-get update
-          sudo apt-get install -y musl-tools clang build-essential curl llvm-dev libclang-dev linux-headers-generic libsnappy-dev liblz4-dev libzstd-dev libgflags-dev zlib1g-dev libbz2-dev
+          sudo apt-get install -y protobuf-compiler musl-tools clang build-essential curl llvm-dev libclang-dev linux-headers-generic libsnappy-dev liblz4-dev libzstd-dev libgflags-dev zlib1g-dev libbz2-dev
           sudo ln -s /usr/bin/g++ /usr/bin/musl-g++
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
