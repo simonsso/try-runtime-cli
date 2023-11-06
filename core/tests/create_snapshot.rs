@@ -31,7 +31,7 @@ use tokio::process::Command;
 
 #[tokio::test]
 async fn create_snapshot_works() {
-    let port = 45789;
+    let port = 5789;
     let ws_url = format!("ws://localhost:{}", port);
 
     // Spawn a dev node.
@@ -57,7 +57,8 @@ async fn create_snapshot_works() {
         .expect("Failed to create a tempdir");
     let snap_file_path = temp_dir.path().join("snapshot.snap");
 
-    common::run_with_timeout(Duration::from_secs(60), async move {
+    log::info!("Tempdir {:?}",temp_dir);
+    common::run_with_timeout( Duration::from_secs(60), async move {
         fn create_snapshot(ws_url: &str, snap_file: &PathBuf, at: Hash) -> tokio::process::Child {
             Command::new(cargo_bin("try-runtime"))
                 .stdout(std::process::Stdio::piped())
@@ -71,8 +72,15 @@ async fn create_snapshot_works() {
                 .unwrap()
         }
         let block_number = 2;
-        let block_hash = common::block_hash(block_number, &ws_url).await.unwrap();
+        let block_hash = common::block_hash(block_number, &ws_url).await;
+        // Retry
 
+        let block_hash = if let Ok(bh) = block_hash {
+            bh
+        }else{
+            log::info!("Reconnecting");
+            common::block_hash(block_number, &ws_url).await.unwrap()
+        };
         // Try to create a snapshot.
         let mut snapshot_creation = create_snapshot(&ws_url, &snap_file_path, block_hash);
 
