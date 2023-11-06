@@ -62,7 +62,7 @@ sp-weights = { git = "https://github.com/paritytech/polkadot-sdk", branch = "mas
 substrate-cli-test-utils = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 substrate-rpc-client = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
-node-executor = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-statement-store  = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 node-primitives = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
 
 # Local

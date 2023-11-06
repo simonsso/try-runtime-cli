@@ -309,7 +309,6 @@
 use std::env;
 
 use clap::Parser;
-use node_executor::ExecutorDispatch;
 use node_primitives::Block;
 use try_runtime_core::commands::TryRuntime;
 
@@ -324,11 +323,11 @@ fn init_env() {
 async fn main() {
     init_env();
 
-    use sc_executor::{sp_wasm_interface::ExtendedHostFunctions, NativeExecutionDispatch};
+    use sc_executor::sp_wasm_interface::ExtendedHostFunctions;
     let cmd = TryRuntime::parse();
     cmd.run::<Block, ExtendedHostFunctions<
         sp_io::SubstrateHostFunctions,
-        <ExecutorDispatch as NativeExecutionDispatch>::ExtendHostFunctions,
+        sp_statement_store::runtime_api::HostFunctions,
     >>()
     .await
     .unwrap();
