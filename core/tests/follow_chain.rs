@@ -26,7 +26,7 @@ use tokio::process::Command;
 
 #[tokio::test]
 async fn follow_chain_works() {
-    let port = 45789;
+    let port = 5789;
     let ws_url = format!("ws://localhost:{}", port);
 
     // Spawn a dev node.

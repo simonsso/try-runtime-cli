@@ -59,6 +59,7 @@ regex = { workspace = true }
 tempfile = { workspace = true }
 tokio = { workspace = true }
 
-node-executor = { workspace = true }
+
+sp-statement-store = { workspace = true }
 sc-service = { workspace = true }
 substrate-cli-test-utils = { workspace = true, features = ["try-runtime"] }

@@ -27,7 +27,7 @@ use tokio::process::Command;
 
 #[tokio::test]
 async fn execute_block_works() {
-    let port = 45789;
+    let port = 5789;
     let ws_url = format!("ws://localhost:{}", port);
 
     // Spawn a dev node.
@@ -61,8 +61,15 @@ async fn execute_block_works() {
         }
 
         let block_number = 1;
-        let block_hash = common::block_hash(block_number, &ws_url).await.unwrap();
+        let block_hash = common::block_hash(block_number, &ws_url).await;
+        // Retry
 
+        let block_hash = if let Ok(bh) = block_hash {
+            bh
+        }else{
+            log::info!("Reconnecting");
+            common::block_hash(block_number, &ws_url).await.unwrap()
+        };
         // Try to execute the block.
         let mut block_execution = execute_block(&ws_url, block_hash);
 
